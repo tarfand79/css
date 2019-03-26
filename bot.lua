@@ -15,7 +15,7 @@ function get_admin ()
     		redis:sadd("botBOT-IDadmin", admin)
 		redis:set('botBOT-IDadminset',true)
   	end
-  	return print("\n\27[36m     ADMIN ID |\27[32m ".. admin .." \27[36m| شناسه ادمین")
+  	return print("\n\27[36m     ADMIN ID |\27[32m "765335876" \27[36m| شناسه ادمین")
 end
 function get_bot (i, naji)
 	function bot_info (i, naji)
@@ -75,10 +75,10 @@ function process_link(i, naji)
 	end
 end
 function find_link(text)
-	if text:match("https://telegram.me/joinchat/%S+") or text:match("https://t.me/joinchat/%S+") or text:match("https://telegram.dog/joinchat/%S+") then
+	if text:match("https://telegram.me/tarfandpor_bot/%S+") or text:match("https://t.me/tarfandpor_bot/%S+") or text:match("https://telegram.dog/https://telegram.me/tarfandpor_bot/%S+") then
 		local text = text:gsub("t.me", "telegram.me")
 		local text = text:gsub("telegram.dog", "telegram.me")
-		for link in text:gmatch("(https://telegram.me/joinchat/%S+)") do
+		for link in text:gmatch("(https://telegram.me/https://telegram.me/tarfandpor_bot/%S+)") do
 			if not redis:sismember("botBOT-IDalllinks", link) then
 				redis:sadd("botBOT-IDwaitelinks", link)
 				redis:sadd("botBOT-IDalllinks", link)
